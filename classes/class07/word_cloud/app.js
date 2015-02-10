@@ -42,7 +42,7 @@ app.get('/tweets', function(req, res){
   request.post(postOptions, function(err, resp, body){
     var bearer_token = JSON.parse(body).access_token;
     var getOptions = {
-      url: 'https://api.twitter.com/1.1/search/tweets.json?q='+query,
+      url: 'https://api.twitter.com/1.1/search/tweets.json?lang=en&q='+query,
       headers: {
         'Host': 'api.twitter.com',
         'Authorization': 'Bearer '+bearer_token
